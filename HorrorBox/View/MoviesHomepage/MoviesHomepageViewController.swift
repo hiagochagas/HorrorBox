@@ -8,22 +8,47 @@
 import UIKit
 
 class MoviesHomepageViewController: UIViewController {
-
+    let movieCollectionViewCellID = "movieCollectionViewCellID"
+    let movieView = MoviesHomepage()
+    var moviesViewModel = MoviesHomepageViewModel()
+    var movies: [Movie]?
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        viewEditing()
+        collectionViewConfig()
+    }
+    
+    func viewEditing() {
+        view = movieView
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = "Featured"
+        self.navigationController?.title = "Movies"
+    }
+    
+    func collectionViewConfig() {
+        movieView.moviesCollectionView.delegate = self
+        movieView.moviesCollectionView.dataSource = self
+        movieView.moviesCollectionView.register(MovieCollectionViewCell.self, forCellWithReuseIdentifier: movieCollectionViewCellID)
+        moviesViewModel.moviesVC = self
+        moviesViewModel.apiRequest()
     }
     
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension MoviesHomepageViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return movies?.count ?? 2
     }
-    */
-
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieCollectionViewCellID, for: indexPath) as! MovieCollectionViewCell
+//        cell.movieCover.image =
+        return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width/3.2, height: 214)
+    }
+    
+    
 }
