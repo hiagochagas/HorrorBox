@@ -17,6 +17,7 @@ class MoviesHomepage: UIView, ViewCode {
     let moviesCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cView.backgroundColor = .clear
         return cView
     }()
     

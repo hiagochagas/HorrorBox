@@ -12,6 +12,7 @@ class MoviesHomepageViewController: UIViewController {
     let movieView = MoviesHomepage()
     var moviesViewModel = MoviesHomepageViewModel()
     var movies: [Movie]?
+    var movieCovers: [UIImage]?
     override func viewDidLoad() {
         super.viewDidLoad()
         viewEditing()
@@ -38,12 +39,13 @@ class MoviesHomepageViewController: UIViewController {
 
 extension MoviesHomepageViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return movies?.count ?? 2
+        return movies?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieCollectionViewCellID, for: indexPath) as! MovieCollectionViewCell
-//        cell.movieCover.image =
+        let movieURL = movies?[indexPath.row].posterPath ?? ""
+        moviesViewModel.movieCoverApiRequest(movieURL: movieURL, cell: cell)
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

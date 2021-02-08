@@ -23,18 +23,16 @@ class MovieCollectionViewCell: UICollectionViewCell, ViewCode {
         NSLayoutConstraint.activate([
             movieCover.widthAnchor.constraint(equalToConstant: 126),
             movieCover.heightAnchor.constraint(equalToConstant: 214),
-
             movieCover.leftAnchor.constraint(equalTo: leftAnchor),
-//            movieCover.rightAnchor.constraint(equalTo: rightAnchor),
             movieCover.topAnchor.constraint(equalTo: topAnchor),
-//            movieCover.bottomAnchor.constraint(equalTo: bottomAnchor)
+
         ])
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViewCode()
-        self.backgroundColor = .blue
+//        self.backgroundColor = .blue
     }
     
     required init?(coder: NSCoder) {

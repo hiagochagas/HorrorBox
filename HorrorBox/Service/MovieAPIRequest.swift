@@ -28,7 +28,20 @@ class MovieAPIRequest {
             }
         })
         task.resume()
-
-        
     }
+    func downloadImage(imgURL: String, completionHandler: @escaping (Data?) -> Void){
+        guard let url = URL(string: "https://image.tmdb.org/t/p/original\(imgURL)") else { return }
+        let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+            if error != nil{
+                print(error?.localizedDescription ?? "An error was found while downloading the image")
+                return
+            }
+            do{
+                completionHandler(data)
+            }
+        })
+        task.resume()
+
+    }
+    
 }
