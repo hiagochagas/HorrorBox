@@ -11,12 +11,16 @@ class MoviesHomepageCoordinator: Coordinator {
     var rootViewController: UIViewController {
         return moviesHomepageViewController
     }
+    var rootViewModel: MoviesHomepageViewModel {
+        return moviesHomepageViewModel
+    }
     
     var moviesHomepageViewController: MoviesHomepageViewController
-    
+    var moviesHomepageViewModel: MoviesHomepageViewModel
     init() {
         moviesHomepageViewController = MoviesHomepageViewController()
-        //myListViewController.coordinator = self
+        moviesHomepageViewModel = MoviesHomepageViewModel()
+        moviesHomepageViewController.moviesCoordinator = self
     }
     
 }

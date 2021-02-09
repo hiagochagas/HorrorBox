@@ -16,6 +16,7 @@ class MoviesHomepage: UIView, ViewCode {
     
     let moviesCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 10
         let cView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cView.backgroundColor = .clear
         return cView
@@ -35,7 +36,7 @@ class MoviesHomepage: UIView, ViewCode {
             featuredMoviesBackground.rightAnchor.constraint(equalTo: rightAnchor),
             featuredMoviesBackground.heightAnchor.constraint(equalToConstant: 414),
             moviesCollectionView.leftAnchor.constraint(equalTo: leftAnchor),
-            moviesCollectionView.rightAnchor.constraint(equalTo: rightAnchor),
+            moviesCollectionView.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
             moviesCollectionView.topAnchor.constraint(equalTo: featuredMoviesBackground.bottomAnchor, constant: 80),
             moviesCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
 

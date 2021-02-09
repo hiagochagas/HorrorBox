@@ -9,10 +9,12 @@ import UIKit
 
 class MoviesHomepageViewController: UIViewController {
     let movieCollectionViewCellID = "movieCollectionViewCellID"
+    var moviesCoordinator: MoviesHomepageCoordinator?
     let movieView = MoviesHomepage()
-    var moviesViewModel = MoviesHomepageViewModel()
+    var moviesViewModel: MoviesHomepageViewModel {
+        return moviesCoordinator!.rootViewModel
+    }
     var movies: [Movie]?
-    var movieCovers: [UIImage]?
     override func viewDidLoad() {
         super.viewDidLoad()
         viewEditing()
@@ -34,6 +36,17 @@ class MoviesHomepageViewController: UIViewController {
         moviesViewModel.apiRequest()
     }
     
+    func presentMovieDetailVC(_ indexPath: IndexPath) {
+        let viewController = MovieDetailViewController()
+        let movie = movies?[indexPath.row]
+        viewController.movieDetailView.movieName.text = movie?.originalTitle
+        viewController.movieDetailView.movieScore.text = "Score: " + String(movie?.voteAverage ?? 0)
+        moviesViewModel.movieCoverApiRequest(movieURL: movie?.posterPath ?? "", view: viewController.movieDetailView.movieCoverImage)
+        viewController.movieDetailView.movieDetailsLabel.text = movie?.overview
+        self.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: true, completion: nil)
+    }
+
 
 }
 
@@ -45,12 +58,16 @@ extension MoviesHomepageViewController: UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieCollectionViewCellID, for: indexPath) as! MovieCollectionViewCell
         let movieURL = movies?[indexPath.row].posterPath ?? ""
-        moviesViewModel.movieCoverApiRequest(movieURL: movieURL, cell: cell)
+        moviesViewModel.movieCoverApiRequest(movieURL: movieURL, view: cell.movieCover)
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width/3.2, height: 214)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presentMovieDetailVC(indexPath)
+    }
     
 }
