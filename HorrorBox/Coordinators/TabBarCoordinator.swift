@@ -20,6 +20,8 @@ class TabBarCoordinator: NSObject, Coordinator {
         moviesHomePageCoordinator = MoviesHomepageCoordinator()
         myListCoordinator = MyListCoordinator()
         super.init()
+        moviesHomePageCoordinator.tabBarCoordinator = self
+        myListCoordinator.tabBarCoordinator = self
         tabBarController.TabBarCoordinator = self
         tabBarController.setupTabBar()
     }

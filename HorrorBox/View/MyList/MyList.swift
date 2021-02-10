@@ -7,14 +7,35 @@
 
 import UIKit
 
-class MyList: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+class MyList: UIView, ViewCode {
+    let movieTableView: UITableView = {
+        let table = UITableView()
+        table.separatorStyle = .none
+        table.backgroundColor = .none
+        return table
+    }()
+    
+    func setViewHierarchy() {
+        addSubview(movieTableView)
+        movieTableView.translatesAutoresizingMaskIntoConstraints = false
     }
-    */
-
+    
+    func setConstraints() {
+        NSLayoutConstraint.activate([
+            movieTableView.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor),
+            movieTableView.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor),
+            movieTableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 50),
+            movieTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+        ])
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.backgroundColor = .blackBackground
+        setupViewCode()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

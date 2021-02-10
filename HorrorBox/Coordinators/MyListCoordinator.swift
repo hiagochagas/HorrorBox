@@ -11,12 +11,16 @@ class MyListCoordinator: Coordinator {
     var rootViewController: UIViewController {
         return myListViewController
     }
-    
+    var rootViewModel: MyListViewModel {
+        return myListViewModel
+    }
+    var tabBarCoordinator: TabBarCoordinator?
     var myListViewController: MyListViewController
-    
+    var myListViewModel: MyListViewModel
     init() {
         myListViewController = MyListViewController()
-        //myListViewController.coordinator = self
+        myListViewModel = MyListViewModel()
+        myListViewController.coordinator = self
     }
     
 }

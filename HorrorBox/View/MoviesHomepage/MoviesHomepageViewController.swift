@@ -39,12 +39,15 @@ class MoviesHomepageViewController: UIViewController {
     func presentMovieDetailVC(_ indexPath: IndexPath) {
         let viewController = MovieDetailViewController()
         let movie = movies?[indexPath.row]
-        viewController.movieDetailView.movieName.text = movie?.originalTitle
-        viewController.movieDetailView.movieScore.text = "Score: " + String(movie?.voteAverage ?? 0)
-        moviesViewModel.movieCoverApiRequest(movieURL: movie?.posterPath ?? "", view: viewController.movieDetailView.movieCoverImage)
-        viewController.movieDetailView.movieDetailsLabel.text = movie?.overview
+        viewController.movie = movie
+        viewController.upperVC = self
         self.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: true, completion: nil)
+    }
+    
+    func saveMovie(movie: Movie, movieCover: UIImage) {
+        moviesCoordinator?.tabBarCoordinator?.myListCoordinator.myListViewModel.addMovie(movie: movie, movieCover: movieCover)
+        moviesCoordinator?.tabBarCoordinator?.myListCoordinator.myListViewController.contentView.movieTableView.reloadData()
     }
 
 

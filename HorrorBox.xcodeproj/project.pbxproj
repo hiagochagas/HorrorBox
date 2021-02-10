@@ -25,6 +25,10 @@
 		6EB0253C25CC20A6009E001E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB0253B25CC20A6009E001E /* UIColor.swift */; };
 		6EB0254325CC3567009E001E /* MoviesHomepageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB0254225CC3567009E001E /* MoviesHomepageViewModel.swift */; };
 		6EB0254725CC3736009E001E /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB0254625CC3736009E001E /* MovieCollectionViewCell.swift */; };
+		6ECA928125D3FD4500EADD91 /* MyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA928025D3FD4500EADD91 /* MyListViewModel.swift */; };
+		6ECA928625D4043900EADD91 /* Film+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA928425D4043900EADD91 /* Film+CoreDataClass.swift */; };
+		6ECA928725D4043900EADD91 /* Film+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA928525D4043900EADD91 /* Film+CoreDataProperties.swift */; };
+		6ECA929025D4181F00EADD91 /* MyListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA928F25D4181F00EADD91 /* MyListTableViewCell.swift */; };
 		6ECE1EFB25CD66C400DD4E51 /* MovieAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECE1EFA25CD66C400DD4E51 /* MovieAPIRequest.swift */; };
 		6ECE1F0025CD675F00DD4E51 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECE1EFF25CD675F00DD4E51 /* Movie.swift */; };
 		6EE3E5FB25D2AD6000DADE31 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE3E5FA25D2AD6000DADE31 /* MovieDetailViewController.swift */; };
@@ -52,6 +56,10 @@
 		6EB0253B25CC20A6009E001E /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		6EB0254225CC3567009E001E /* MoviesHomepageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesHomepageViewModel.swift; sourceTree = "<group>"; };
 		6EB0254625CC3736009E001E /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		6ECA928025D3FD4500EADD91 /* MyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListViewModel.swift; sourceTree = "<group>"; };
+		6ECA928425D4043900EADD91 /* Film+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Film+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6ECA928525D4043900EADD91 /* Film+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Film+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6ECA928F25D4181F00EADD91 /* MyListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListTableViewCell.swift; sourceTree = "<group>"; };
 		6ECE1EFA25CD66C400DD4E51 /* MovieAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPIRequest.swift; sourceTree = "<group>"; };
 		6ECE1EFF25CD675F00DD4E51 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		6EE3E5FA25D2AD6000DADE31 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +114,8 @@
 		6EAFF2AF25CAD6F300CE50B1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6ECA928425D4043900EADD91 /* Film+CoreDataClass.swift */,
+				6ECA928525D4043900EADD91 /* Film+CoreDataProperties.swift */,
 				6EAFF29F25CAD6D400CE50B1 /* HorrorBox.xcdatamodeld */,
 				6ECE1EFF25CD675F00DD4E51 /* Movie.swift */,
 			);
@@ -125,6 +135,7 @@
 		6EAFF2B125CAD6FE00CE50B1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				6ECA927F25D3FD3300EADD91 /* MyList */,
 				6EB0254125CC3544009E001E /* MoviesHomepage */,
 			);
 			path = ViewModel;
@@ -175,6 +186,7 @@
 			children = (
 				6EAFF2CC25CAE20E00CE50B1 /* MyListViewController.swift */,
 				6EAFF2D325CAE2EE00CE50B1 /* MyList.swift */,
+				6ECA928F25D4181F00EADD91 /* MyListTableViewCell.swift */,
 			);
 			path = MyList;
 			sourceTree = "<group>";
@@ -201,6 +213,14 @@
 				6EB0254225CC3567009E001E /* MoviesHomepageViewModel.swift */,
 			);
 			path = MoviesHomepage;
+			sourceTree = "<group>";
+		};
+		6ECA927F25D3FD3300EADD91 /* MyList */ = {
+			isa = PBXGroup;
+			children = (
+				6ECA928025D3FD4500EADD91 /* MyListViewModel.swift */,
+			);
+			path = MyList;
 			sourceTree = "<group>";
 		};
 		6ECE1EF925CD658F00DD4E51 /* Service */ = {
@@ -286,16 +306,20 @@
 				6EAFF2C925CADF5400CE50B1 /* MyListCoordinator.swift in Sources */,
 				6EAFF2CD25CAE20E00CE50B1 /* MyListViewController.swift in Sources */,
 				6EAFF29725CAD6D400CE50B1 /* AppDelegate.swift in Sources */,
+				6ECA928725D4043900EADD91 /* Film+CoreDataProperties.swift in Sources */,
 				6EAFF2BD25CADC1400CE50B1 /* Coordinator.swift in Sources */,
 				6EE3E5FE25D2AE4500DADE31 /* MovieDetail.swift in Sources */,
 				6EAFF2D425CAE2EE00CE50B1 /* MyList.swift in Sources */,
+				6ECA928125D3FD4500EADD91 /* MyListViewModel.swift in Sources */,
 				6EAFF2BA25CADAF100CE50B1 /* TabBarCoordinator.swift in Sources */,
 				6EAFF2C325CADEE500CE50B1 /* TabBarViewController.swift in Sources */,
 				6EAFF2D125CAE2DF00CE50B1 /* MoviesHomepageViewController.swift in Sources */,
 				6EAFF29925CAD6D400CE50B1 /* SceneDelegate.swift in Sources */,
 				6EAFF2A125CAD6D400CE50B1 /* HorrorBox.xcdatamodeld in Sources */,
 				6EE3E5FB25D2AD6000DADE31 /* MovieDetailViewController.swift in Sources */,
+				6ECA929025D4181F00EADD91 /* MyListTableViewCell.swift in Sources */,
 				6EB0254325CC3567009E001E /* MoviesHomepageViewModel.swift in Sources */,
+				6ECA928625D4043900EADD91 /* Film+CoreDataClass.swift in Sources */,
 				6EAFF2C625CADF0D00CE50B1 /* MoviesHomepageCoordinator.swift in Sources */,
 				6ECE1EFB25CD66C400DD4E51 /* MovieAPIRequest.swift in Sources */,
 				6EB0253825CC19EB009E001E /* ViewCode.swift in Sources */,
