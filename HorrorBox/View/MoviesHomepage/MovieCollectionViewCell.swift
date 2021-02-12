@@ -23,7 +23,8 @@ class MovieCollectionViewCell: UICollectionViewCell, ViewCode {
         NSLayoutConstraint.activate([
             movieCover.widthAnchor.constraint(equalToConstant: 126),
             movieCover.heightAnchor.constraint(equalToConstant: 214),
-            movieCover.leftAnchor.constraint(equalTo: leftAnchor, constant: 10),
+//            movieCover.leftAnchor.constraint(equalTo: leftAnchor, constant: 5),
+//            movieCover.rightAnchor.constraint(equalTo: rightAnchor, constant: -5),
             movieCover.topAnchor.constraint(equalTo: topAnchor),
 
         ])

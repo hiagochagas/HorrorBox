@@ -14,7 +14,7 @@ public class Film: NSManagedObject {
     static func fetchAll(viewContext: NSManagedObjectContext = AppDelegate.viewContext) -> [Film] {
             let request : NSFetchRequest<Film> = Film.fetchRequest()
                 request.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
-            guard let films = try? AppDelegate.viewContext.fetch(request) else {
+            guard let films = try? viewContext.fetch(request) else {
                 return []
             }
             return films

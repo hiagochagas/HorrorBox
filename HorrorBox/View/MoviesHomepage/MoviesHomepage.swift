@@ -16,28 +16,21 @@ class MoviesHomepage: UIView, ViewCode {
     
     let moviesCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 10
         let cView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cView.backgroundColor = .clear
         return cView
     }()
     
     func setViewHierarchy() {
-        addSubview(featuredMoviesBackground)
-        featuredMoviesBackground.translatesAutoresizingMaskIntoConstraints = false
         addSubview(moviesCollectionView)
         moviesCollectionView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     func setConstraints() {
         NSLayoutConstraint.activate([
-            featuredMoviesBackground.leftAnchor.constraint(equalTo: leftAnchor),
-            featuredMoviesBackground.topAnchor.constraint(equalTo: topAnchor),
-            featuredMoviesBackground.rightAnchor.constraint(equalTo: rightAnchor),
-            featuredMoviesBackground.heightAnchor.constraint(equalToConstant: 414),
-            moviesCollectionView.leftAnchor.constraint(equalTo: leftAnchor),
-            moviesCollectionView.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
-            moviesCollectionView.topAnchor.constraint(equalTo: featuredMoviesBackground.bottomAnchor, constant: 80),
+            moviesCollectionView.leftAnchor.constraint(equalTo: leftAnchor, constant: 5),
+            moviesCollectionView.rightAnchor.constraint(equalTo: rightAnchor, constant: -5),
+            moviesCollectionView.topAnchor.constraint(equalTo: topAnchor, constant: -50),
             moviesCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
 
         ])

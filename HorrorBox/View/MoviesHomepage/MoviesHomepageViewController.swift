@@ -9,6 +9,8 @@ import UIKit
 
 class MoviesHomepageViewController: UIViewController {
     let movieCollectionViewCellID = "movieCollectionViewCellID"
+    let movieCollectionViewHeaderID = "movieCollectionViewHeaderID"
+
     var moviesCoordinator: MoviesHomepageCoordinator?
     let movieView = MoviesHomepage()
     var moviesViewModel: MoviesHomepageViewModel {
@@ -23,8 +25,7 @@ class MoviesHomepageViewController: UIViewController {
     
     func viewEditing() {
         view = movieView
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.title = "Featured"
+        navigationController?.navigationBar.isHidden = true
         self.navigationController?.title = "Movies"
     }
     
@@ -32,6 +33,7 @@ class MoviesHomepageViewController: UIViewController {
         movieView.moviesCollectionView.delegate = self
         movieView.moviesCollectionView.dataSource = self
         movieView.moviesCollectionView.register(MovieCollectionViewCell.self, forCellWithReuseIdentifier: movieCollectionViewCellID)
+        movieView.moviesCollectionView.register(MovieHomepageHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: movieCollectionViewHeaderID)
         moviesViewModel.moviesVC = self
         moviesViewModel.apiRequest()
     }
@@ -71,6 +73,15 @@ extension MoviesHomepageViewController: UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         presentMovieDetailVC(indexPath)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: movieCollectionViewHeaderID, for: indexPath) as! MovieHomepageHeaderCollectionReusableView
+        return header
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.size.width, height: 454)
     }
     
 }

@@ -12,10 +12,10 @@ class MoviesHomepageViewModel {
     public static let imageCache = NSCache<NSString, UIImage>()
     let apiRequester = MovieAPIRequest()
     func apiRequest() {
-        apiRequester.fetchMovies { (movies) in
+        apiRequester.fetchMovies { [weak self] (movies) in
             DispatchQueue.main.async {
-                self.moviesVC?.movies = movies.results
-                self.moviesVC?.movieView.moviesCollectionView.reloadData()
+                self?.moviesVC?.movies = movies.results
+                self?.moviesVC?.movieView.moviesCollectionView.reloadData()
             }
         }
     }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E02EBC925D54F360026A97F /* HorrorBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E02EBC825D54F360026A97F /* HorrorBoxTests.swift */; };
+		6E02EBD325D54FE50026A97F /* MyListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E02EBD225D54FE50026A97F /* MyListViewModelTests.swift */; };
+		6E02EBD825D554F70026A97F /* HorrorBox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6EAFF29F25CAD6D400CE50B1 /* HorrorBox.xcdatamodeld */; };
+		6E02EBE225D5678B0026A97F /* HorrorBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E02EBE125D5678B0026A97F /* HorrorBoxUITests.swift */; };
 		6EAFF29725CAD6D400CE50B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAFF29625CAD6D400CE50B1 /* AppDelegate.swift */; };
 		6EAFF29925CAD6D400CE50B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAFF29825CAD6D400CE50B1 /* SceneDelegate.swift */; };
 		6EAFF2A125CAD6D400CE50B1 /* HorrorBox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6EAFF29F25CAD6D400CE50B1 /* HorrorBox.xcdatamodeld */; };
@@ -33,9 +37,34 @@
 		6ECE1F0025CD675F00DD4E51 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECE1EFF25CD675F00DD4E51 /* Movie.swift */; };
 		6EE3E5FB25D2AD6000DADE31 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE3E5FA25D2AD6000DADE31 /* MovieDetailViewController.swift */; };
 		6EE3E5FE25D2AE4500DADE31 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE3E5FD25D2AE4500DADE31 /* MovieDetail.swift */; };
+		6EE5794D25D45A8F00869435 /* MovieHomepageHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE5794C25D45A8F00869435 /* MovieHomepageHeaderCollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6E02EBCB25D54F360026A97F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EAFF28B25CAD6D400CE50B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EAFF29225CAD6D400CE50B1;
+			remoteInfo = HorrorBox;
+		};
+		6E02EBE425D5678B0026A97F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EAFF28B25CAD6D400CE50B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EAFF29225CAD6D400CE50B1;
+			remoteInfo = HorrorBox;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		6E02EBC625D54F360026A97F /* HorrorBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HorrorBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E02EBC825D54F360026A97F /* HorrorBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorrorBoxTests.swift; sourceTree = "<group>"; };
+		6E02EBCA25D54F360026A97F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E02EBD225D54FE50026A97F /* MyListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListViewModelTests.swift; sourceTree = "<group>"; };
+		6E02EBDF25D5678B0026A97F /* HorrorBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HorrorBoxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E02EBE125D5678B0026A97F /* HorrorBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorrorBoxUITests.swift; sourceTree = "<group>"; };
+		6E02EBE325D5678B0026A97F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EAFF29325CAD6D400CE50B1 /* HorrorBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HorrorBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EAFF29625CAD6D400CE50B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EAFF29825CAD6D400CE50B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,9 +93,24 @@
 		6ECE1EFF25CD675F00DD4E51 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		6EE3E5FA25D2AD6000DADE31 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		6EE3E5FD25D2AE4500DADE31 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
+		6EE5794C25D45A8F00869435 /* MovieHomepageHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieHomepageHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6E02EBC325D54F360026A97F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E02EBDC25D5678B0026A97F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6EAFF29025CAD6D400CE50B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -77,10 +121,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E02EBC725D54F360026A97F /* HorrorBoxTests */ = {
+			isa = PBXGroup;
+			children = (
+				6E02EBD225D54FE50026A97F /* MyListViewModelTests.swift */,
+				6E02EBC825D54F360026A97F /* HorrorBoxTests.swift */,
+				6E02EBCA25D54F360026A97F /* Info.plist */,
+			);
+			path = HorrorBoxTests;
+			sourceTree = "<group>";
+		};
+		6E02EBE025D5678B0026A97F /* HorrorBoxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6E02EBE125D5678B0026A97F /* HorrorBoxUITests.swift */,
+				6E02EBE325D5678B0026A97F /* Info.plist */,
+			);
+			path = HorrorBoxUITests;
+			sourceTree = "<group>";
+		};
 		6EAFF28A25CAD6D400CE50B1 = {
 			isa = PBXGroup;
 			children = (
 				6EAFF29525CAD6D400CE50B1 /* HorrorBox */,
+				6E02EBC725D54F360026A97F /* HorrorBoxTests */,
+				6E02EBE025D5678B0026A97F /* HorrorBoxUITests */,
 				6EAFF29425CAD6D400CE50B1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				6EAFF29325CAD6D400CE50B1 /* HorrorBox.app */,
+				6E02EBC625D54F360026A97F /* HorrorBoxTests.xctest */,
+				6E02EBDF25D5678B0026A97F /* HorrorBoxUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,6 +225,7 @@
 				6EB0254625CC3736009E001E /* MovieCollectionViewCell.swift */,
 				6EE3E5FA25D2AD6000DADE31 /* MovieDetailViewController.swift */,
 				6EE3E5FD25D2AE4500DADE31 /* MovieDetail.swift */,
+				6EE5794C25D45A8F00869435 /* MovieHomepageHeaderCollectionReusableView.swift */,
 			);
 			path = MoviesHomepage;
 			sourceTree = "<group>";
@@ -234,6 +302,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6E02EBC525D54F360026A97F /* HorrorBoxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E02EBCF25D54F360026A97F /* Build configuration list for PBXNativeTarget "HorrorBoxTests" */;
+			buildPhases = (
+				6E02EBC225D54F360026A97F /* Sources */,
+				6E02EBC325D54F360026A97F /* Frameworks */,
+				6E02EBC425D54F360026A97F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E02EBCC25D54F360026A97F /* PBXTargetDependency */,
+			);
+			name = HorrorBoxTests;
+			productName = HorrorBoxTests;
+			productReference = 6E02EBC625D54F360026A97F /* HorrorBoxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6E02EBDE25D5678B0026A97F /* HorrorBoxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E02EBE625D5678B0026A97F /* Build configuration list for PBXNativeTarget "HorrorBoxUITests" */;
+			buildPhases = (
+				6E02EBDB25D5678B0026A97F /* Sources */,
+				6E02EBDC25D5678B0026A97F /* Frameworks */,
+				6E02EBDD25D5678B0026A97F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E02EBE525D5678B0026A97F /* PBXTargetDependency */,
+			);
+			name = HorrorBoxUITests;
+			productName = HorrorBoxUITests;
+			productReference = 6E02EBDF25D5678B0026A97F /* HorrorBoxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		6EAFF29225CAD6D400CE50B1 /* HorrorBox */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EAFF2AA25CAD6D500CE50B1 /* Build configuration list for PBXNativeTarget "HorrorBox" */;
@@ -260,6 +364,14 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					6E02EBC525D54F360026A97F = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 6EAFF29225CAD6D400CE50B1;
+					};
+					6E02EBDE25D5678B0026A97F = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 6EAFF29225CAD6D400CE50B1;
+					};
 					6EAFF29225CAD6D400CE50B1 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -279,11 +391,27 @@
 			projectRoot = "";
 			targets = (
 				6EAFF29225CAD6D400CE50B1 /* HorrorBox */,
+				6E02EBC525D54F360026A97F /* HorrorBoxTests */,
+				6E02EBDE25D5678B0026A97F /* HorrorBoxUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6E02EBC425D54F360026A97F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E02EBDD25D5678B0026A97F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6EAFF29125CAD6D400CE50B1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -296,6 +424,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6E02EBC225D54F360026A97F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E02EBD825D554F70026A97F /* HorrorBox.xcdatamodeld in Sources */,
+				6E02EBD325D54FE50026A97F /* MyListViewModelTests.swift in Sources */,
+				6E02EBC925D54F360026A97F /* HorrorBoxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E02EBDB25D5678B0026A97F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E02EBE225D5678B0026A97F /* HorrorBoxUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6EAFF28F25CAD6D400CE50B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,6 +455,7 @@
 				6ECA928725D4043900EADD91 /* Film+CoreDataProperties.swift in Sources */,
 				6EAFF2BD25CADC1400CE50B1 /* Coordinator.swift in Sources */,
 				6EE3E5FE25D2AE4500DADE31 /* MovieDetail.swift in Sources */,
+				6EE5794D25D45A8F00869435 /* MovieHomepageHeaderCollectionReusableView.swift in Sources */,
 				6EAFF2D425CAE2EE00CE50B1 /* MyList.swift in Sources */,
 				6ECA928125D3FD4500EADD91 /* MyListViewModel.swift in Sources */,
 				6EAFF2BA25CADAF100CE50B1 /* TabBarCoordinator.swift in Sources */,
@@ -329,6 +476,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		6E02EBCC25D54F360026A97F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6EAFF29225CAD6D400CE50B1 /* HorrorBox */;
+			targetProxy = 6E02EBCB25D54F360026A97F /* PBXContainerItemProxy */;
+		};
+		6E02EBE525D5678B0026A97F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6EAFF29225CAD6D400CE50B1 /* HorrorBox */;
+			targetProxy = 6E02EBE425D5678B0026A97F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		6EAFF2A425CAD6D500CE50B1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -341,6 +501,84 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6E02EBCD25D54F360026A97F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BSANZ76H3Y;
+				INFOPLIST_FILE = HorrorBoxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hiagochagas.HorrorBoxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HorrorBox.app/HorrorBox";
+			};
+			name = Debug;
+		};
+		6E02EBCE25D54F360026A97F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BSANZ76H3Y;
+				INFOPLIST_FILE = HorrorBoxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hiagochagas.HorrorBoxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HorrorBox.app/HorrorBox";
+			};
+			name = Release;
+		};
+		6E02EBE725D5678B0026A97F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BSANZ76H3Y;
+				INFOPLIST_FILE = HorrorBoxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hiagochagas.HorrorBoxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HorrorBox;
+			};
+			name = Debug;
+		};
+		6E02EBE825D5678B0026A97F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BSANZ76H3Y;
+				INFOPLIST_FILE = HorrorBoxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hiagochagas.HorrorBoxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HorrorBox;
+			};
+			name = Release;
+		};
 		6EAFF2A825CAD6D500CE50B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -463,6 +701,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = BSANZ76H3Y;
 				INFOPLIST_FILE = HorrorBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -472,7 +711,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = hiagochagas.HorrorBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -482,6 +721,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = BSANZ76H3Y;
 				INFOPLIST_FILE = HorrorBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -491,13 +731,31 @@
 				PRODUCT_BUNDLE_IDENTIFIER = hiagochagas.HorrorBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6E02EBCF25D54F360026A97F /* Build configuration list for PBXNativeTarget "HorrorBoxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E02EBCD25D54F360026A97F /* Debug */,
+				6E02EBCE25D54F360026A97F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E02EBE625D5678B0026A97F /* Build configuration list for PBXNativeTarget "HorrorBoxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E02EBE725D5678B0026A97F /* Debug */,
+				6E02EBE825D5678B0026A97F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6EAFF28E25CAD6D400CE50B1 /* Build configuration list for PBXProject "HorrorBox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

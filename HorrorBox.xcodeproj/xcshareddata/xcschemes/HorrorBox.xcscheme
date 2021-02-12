@@ -29,6 +29,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6E02EBC525D54F360026A97F"
+               BuildableName = "HorrorBoxTests.xctest"
+               BlueprintName = "HorrorBoxTests"
+               ReferencedContainer = "container:HorrorBox.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6E02EBDE25D5678B0026A97F"
+               BuildableName = "HorrorBoxUITests.xctest"
+               BlueprintName = "HorrorBoxUITests"
+               ReferencedContainer = "container:HorrorBox.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

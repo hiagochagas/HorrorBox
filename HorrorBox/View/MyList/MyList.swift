@@ -24,7 +24,7 @@ class MyList: UIView, ViewCode {
         NSLayoutConstraint.activate([
             movieTableView.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor),
             movieTableView.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor),
-            movieTableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 50),
+            movieTableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
             movieTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
         ])
     }
